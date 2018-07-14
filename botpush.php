@@ -31,6 +31,12 @@
         $arrayPostData['messages'][0]['text'] = "$data4";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "B"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "BOT";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "!command"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
