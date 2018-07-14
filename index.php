@@ -1,2 +1,2 @@
 <?php
-echo "adsfasdfasdf LINE BOT";
+echo "LINE BOT HOTRADIO";
