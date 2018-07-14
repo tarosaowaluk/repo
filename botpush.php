@@ -109,6 +109,12 @@
         $arrayPostData['messages'][0]['text'] = "ครบแล้วห้ามเลิกนะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "บาย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "จะไปตายไหนก็ไป๊ไปกินขรี้ไป๊ !!";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "ใช่ไหมบอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
