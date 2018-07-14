@@ -6,10 +6,10 @@
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-    $data = file_get_contents('https://www.soicode.online/api/gettitle.php');
-    $data2 = file_get_contents('https://www.soicode.online/api/listen.php');
+    $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
+    $data2 = file_get_contents('https://taro2.herokuapp.com/listen.php');
     $data3 = "ขณะนี้เวลา " . date("h:i:sa");
-    $data4 = file_get_contents('https://www.soicode.online/api/DJ.php');
+    $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
