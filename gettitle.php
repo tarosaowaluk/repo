@@ -1,0 +1,1 @@
+<? $data = file("https://radio10.plathong.net/7208/currentsong?sid=1");echo $data[0];?>
