@@ -15,10 +15,10 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "สวัสดี1"){
-        $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
+        $datahi = file_get_contents('https://taro2.herokuapp.com/hims.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
+        $arrayPostData['messages'][0]['text'] = "$datahi";
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "เพลงไร"){
