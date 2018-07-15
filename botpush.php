@@ -14,7 +14,7 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ยินดีต้อนรับเข้าสู่ HotRadio";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    if($message == "สวัสดีครับ"){
+    if($message == "สวัสดีครับ1"){
 	$datahi = $t = date("H"); if ($t < "17") { echo "Have a good day!"; } else { echo "Have a good night!"; }
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
