@@ -42,6 +42,13 @@
         $arrayPostData['messages'][0]['text'] = "https://www.freeformatter.com/xml-escape.html#ad-output";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "คิดถึง"){
+        $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "คิดถึงจะแย่แล่วววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววว";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "!command"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
