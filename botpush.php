@@ -21,15 +21,6 @@
         $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
         replyMsg($arrayHeader,$arrayPostData);
     }
-        if($message == "ตื่นแล้ว"),
-	($message == "เพิ่งตื่น"),
-	($message == "ตื่น"){
-        $data = file_get_contents('https://www.soicode.online/api/gettitle.php');
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "อรุณสวัสดิ์ครับโผมมมมมมมมมมมมมมมมมมม";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
         if($message == "ดีเจ"){
         $data4 = file_get_contents('https://www.soicode.online/api/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
