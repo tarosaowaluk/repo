@@ -14,22 +14,22 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ยินดีต้อนรับเข้าสู่ HotRadio";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    if($message == "สวัสดีครับ1"){
-	$datahi = $t = date("H"); if ($t < "17") { echo "Have a good day!"; } else { echo "Have a good night!"; }
+        if($message == "สวัสดี1"){
+        $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "$datahi";
+        $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "เพลงไร"){
-        $data = file_get_contents('https://www.soicode.online/api/gettitle.php');
+        $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "ดีเจ"){
-        $data4 = file_get_contents('https://www.soicode.online/api/DJ.php');
+        $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data4";
@@ -42,7 +42,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "encode"){
-        $data4 = file_get_contents('https://www.soicode.online/api/DJ.php');
+        $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "https://www.freeformatter.com/xml-escape.html#ad-output";
@@ -55,7 +55,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "คนฟัง"){
-        $data2 = file_get_contents('https://www.soicode.online/api/listen.php');
+        $data2 = file_get_contents('https://taro2.herokuapp.com/listen.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data2";
