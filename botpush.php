@@ -21,7 +21,9 @@
         $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
         replyMsg($arrayHeader,$arrayPostData);
     }
-        if($message == "ตื่นแล้ว") ($message == "เพิ่งตื่น") ($message == "ตื่น"){
+        if($message == "ตื่นแล้ว"),
+	($message == "เพิ่งตื่น"),
+	($message == "ตื่น"){
         $data = file_get_contents('https://www.soicode.online/api/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
