@@ -32,10 +32,9 @@
 	if($message == "ตื่นแล้ว"),
 	if($message == "ตื่น"),
 	if($message == "อรุณสวัสดิ์"){
-        $data4 = file_get_contents('https://www.soicode.online/api/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "$data4";
+        $arrayPostData['messages'][0]['text'] = "อรุณสวัสดิ์ครับโผมมมมมมมมมมมมมมมมมมม";
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "encode"){
