@@ -14,6 +14,12 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ยินดีต้อนรับเข้าสู่ HotRadio";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "จะอวก"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ไปรักกันให้ไปไปไป๊ ไป ไปปปปปปปปปปปปปปปปปปปปปปปปปป๊";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "เพิ่งตื่น"){
         $datahi = file_get_contents('https://taro2.herokuapp.com/hims.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
