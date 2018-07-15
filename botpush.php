@@ -14,6 +14,13 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ยินดีต้อนรับเข้าสู่ HotRadio";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    if($message == "สวัสดีครับ"){
+	$datahi = $t = date("H"); if ($t < "17") { echo "Have a good day!"; } else { echo "Have a good night!"; }
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "$datahi";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "เพลงไร"){
         $data = file_get_contents('https://www.soicode.online/api/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
