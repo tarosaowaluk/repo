@@ -34,6 +34,12 @@
         $arrayPostData['messages'][0]['text'] = "กำลังเล่นเพลง : $data";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "มัมเซิฟเวอร์"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "./mumbleRadioPlayer.py --server gameimumble.servegame.com --user HotRadiO -c CHANNEL";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "ดีเจ"){
         $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
