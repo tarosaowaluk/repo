@@ -350,6 +350,14 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
+        else if($message == "FCลูแปง"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/NsREWV.jpg";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
          else if($message == "!logo"){
         $image_url = "https://www.picz.in.th/images/2018/07/15/NAWML1.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
