@@ -14,6 +14,6 @@ if ($xml === FALSE) {
 
 } else { 
     $count_current = $xml->SERVERTITLE; # counting current listeners 
-    echo 'ขณะนี้ ' . $count_current. ' กำลังออนไลน์';
+    echo $count_current. ' กำลังออนไลน์';
 } 
 ?>
