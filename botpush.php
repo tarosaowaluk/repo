@@ -27,6 +27,13 @@
         $arrayPostData['messages'][0]['text'] = "$datahi";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "มอนิ่ง"){
+        $datahi = file_get_contents('https://taro2.herokuapp.com/hims.php');
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "$datahi";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "เพลงไร"){
         $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
