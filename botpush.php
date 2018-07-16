@@ -286,6 +286,46 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "FCมะปวย"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/NstwQb.gif";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "FCมะปวย2"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/Nst1rf.gif";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "FCมะปวย3"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/Nst5NZ.gif";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "ป้ายไฟมะปวย"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/NstOrP.jpg";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "ป้ายไฟมะปวย2"){
+        $image_url = "https://www.picz.in.th/images/2018/07/16/Nstj0t.jpg";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         else if($message == "หี"){
         $image_url = "https://www.picz.in.th/images/2018/07/12/NbcONn.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
