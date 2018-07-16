@@ -20,6 +20,15 @@
         $arrayPostData['messages'][0]['text'] = "ไปรักกันให้ไปไปไป๊ ไป ไปปปปปปปปปปปปปปปปปปปปปปปปปป๊";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "หวยออก"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "	รางวัลที่ 1	596324	3,000,000 บาท
+เลขหน้า 3 ตัว	530 403	2,000 บาท
+เลขท้าย 3 ตัว	362 138	2,000 บาท
+เลขท้าย 2 ตัว	27	1,000 บาท";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "เพิ่งตื่น"){
         $datahi = file_get_contents('https://taro2.herokuapp.com/hims.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
