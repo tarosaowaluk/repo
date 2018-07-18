@@ -37,7 +37,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "เตะออโต้ดีเจ"){
-        $datakick = file_put_contents('http://ohmi-design.com:8914/admin.cgi?user=admin&pass=5edfdf6dcec7ca5d4c52d2e59a4901ad&sid=1&mode=kicksrc');
+        $datakick = file_put_contents('https://www.soicode.online/radio/index2.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$datakick";
