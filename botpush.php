@@ -44,7 +44,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "เพลงไร"){
-        $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
+	$data = file("http://ohmi-design.com/code/status/title.php?id=1196");
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data";
