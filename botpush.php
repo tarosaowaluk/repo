@@ -84,7 +84,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "คนฟัง"){
-        $data2 = file_get_contents('http://ohmi-design.com/code/status/listener.php?id=1196');
+        $data2 = file_get_contents('http://taro2.herokuapp.com/listen.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data2";
