@@ -40,7 +40,7 @@
         $datakick = file_put_contents('https://www.soicode.online/radio/index2.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "$datakick";
+        $arrayPostData['messages'][0]['text'] = "https://www.soicode.online/radio/index2.php";
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "มอนิ่ง"){
