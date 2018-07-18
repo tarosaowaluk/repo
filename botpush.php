@@ -36,6 +36,13 @@
         $arrayPostData['messages'][0]['text'] = "$datahi";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        if($message == "เตะออโต้ดีเจ"){
+        $datakick = file_get_contents('http://www.soicode.online/radio/index2.php');
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "$datakick";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
         if($message == "มอนิ่ง"){
         $datahi = file_get_contents('https://taro2.herokuapp.com/hims.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
