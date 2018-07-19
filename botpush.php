@@ -51,7 +51,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "เพลงไร"){
-        $data = file_get_contents('http://ohmi-design.com/code/status/song.php?id=1196');
+        $data = file_get_contents('https://taro2.herokuapp.com/gettitle.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data";
@@ -64,7 +64,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
         if($message == "ดีเจ"){
-        $data4 = file_get_contents('http://ohmi-design.com/code/status/title.php?id=1196');
+        $data4 = file_get_contents('https://taro2.herokuapp.com/DJ.php');
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$data4";
